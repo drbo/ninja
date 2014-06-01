@@ -46,6 +46,7 @@ __targets() {
   _describe 'targets' targets
 }
 
+_ninja () {
 _arguments \
   {-h,--help}'[Show help]' \
   '--version[Print ninja version]' \
@@ -59,4 +60,6 @@ _arguments \
   '-d+[Enable debugging (use -d list to list modes)]:modes:__modes' \
   '-t+[Run a subtool (use -t list to list subtools)]:tools:__tools' \
   '*::targets:__targets'
+}
 
+compdef _ninja ninja
